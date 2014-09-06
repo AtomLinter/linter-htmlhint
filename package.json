@@ -3,7 +3,7 @@
   "linter-package": true,
   "activationEvents": [],
   "main": "./lib/init",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Linter plugin for HTML, using htmlhint",
   "repository": {
     "type": "git",
