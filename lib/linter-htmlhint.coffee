@@ -44,7 +44,9 @@ class LinterHtmlhint extends Linter
 
     type = "W"
 
-    "#{match.message} (#{type}#{match.code})"
+
+    # "#{match.message} (#{type}#{match.code})"
+    "#{match.message}"[5...-5].replace "<", "&lt;"
 
   destroy: ->
     atom.config.unobserve 'linter-htmlhint.htmlhintExecutablePath'

@@ -1,6 +1,8 @@
+path = require 'path'
+
 module.exports =
   configDefaults:
-    tidyExecutablePath: null
+    htmlhintExecutablePath: path.join __dirname, '..', 'node_modules', 'htmlhint', 'bin'
 
   activate: ->
     console.log 'activate linter-htmlhint'
