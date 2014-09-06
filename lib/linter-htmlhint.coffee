@@ -15,7 +15,6 @@ class LinterHtmlhint extends Linter
 
   # A regex pattern used to extract information from the executable's output.
   regex:
-    # '((?<fail>ERROR: .+)|.+?: line (?<line>[0-9]+), col (?<col>[0-9]+), (?<message>.+) \\(((?<error>E)|(?<warning>W))(?<code>[0-9]+)\\))'
     'line (?<line>[0-9]+), col (?<col>[0-9]+): (?<message>.+)'
 
   isNodeExecutable: yes
@@ -34,18 +33,6 @@ class LinterHtmlhint extends Linter
     @executablePath = "#{htmlhintExecutablePath}"
 
   formatMessage: (match) ->
-    # type = if match.error
-    #   "E"
-    # else if match.warning
-    #   "W"
-    # else
-    #   warn "Regex does not match lint output", match
-    #   ""
-
-    type = "W"
-
-
-    # "#{match.message} (#{type}#{match.code})"
     "#{match.message}"[5...-5].replace "<", "&lt;"
 
   destroy: ->
