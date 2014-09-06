@@ -7,7 +7,7 @@
   "description": "Linter plugin for HTML, using htmlhint",
   "repository": {
     "type": "git",
-    "url": "https://github.com/johnwebbcole/linter-htmlhint.git"
+    "url": "https://github.com/AtomLinter/linter-htmlhint.git"
   },
   "license": "MIT",
   "engines": {
