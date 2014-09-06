@@ -1,0 +1,19 @@
+{
+  "name": "linter-htmlhint",
+  "linter-package": true,
+  "activationEvents": [],
+  "main": "./lib/init",
+  "version": "0.0.1",
+  "description": "Linter plugin for HTML, using htmlhint",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnwebbcole/linter-htmlhint.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "htmlhint": "^0.9.6"
+  }
+}
