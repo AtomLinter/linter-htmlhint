@@ -16,6 +16,8 @@ You can configure linter-htmlhint by editing ~/.atom/config.cson (choose Open Yo
 ```
 'linter-htmlhint':
   'htmlhintExecutablePath': null #htmlhint path. run 'which htmlhint' to find the path
+  'htmlHintRcFilePath': #OPTIONAL custom path to the htmlhintrc file (which can be used to customize rulesets that are run against the HTML)
+  'htmlHintRcFileName': #OPTIONAL filename of the htmlhintrc file (defaults to '.htmlhintrc', but can be overridden)
 ```
 
 ## Contributing
