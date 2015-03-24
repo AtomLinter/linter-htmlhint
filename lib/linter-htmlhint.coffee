@@ -19,14 +19,22 @@ class LinterHtmlhint extends Linter
 
   isNodeExecutable: yes
 
-  constructor: (editor) ->
-    super(editor)
-
-    config = findFile @cwd, ['.htmlhintrc']
+  # update the ruleset anytime the watched htmlhintrc file changes
+  setupHtmlHintRc: =>
+    htmlHintRcPath = atom.config.get 'linter.linter-htmlhint.htmlhintRcFilePath'
+    fileName = atom.config.get('linter.linter-htmlhint.htmlhintRcFileName') || '.htmlhintrc'
+    config = findFile htmlHintRcPath, [fileName]
     if config
       @cmd = @cmd.concat ['-c', config]
 
+
+  constructor: (editor) ->
+    super(editor)
     atom.config.observe 'linter-htmlhint.htmlhintExecutablePath', @formatShellCmd
+
+    # reload if path or file name changed of the htmlhintrc file
+    atom.config.observe 'linter-htmlhint.htmlHintRcFilePath', @setupHtmlHintRc
+    atom.config.observe 'linter-htmlhint.htmlHintRcFileName', @setupHtmlHintRc
 
   formatShellCmd: =>
     htmlhintExecutablePath = atom.config.get 'linter-htmlhint.htmlhintExecutablePath'
