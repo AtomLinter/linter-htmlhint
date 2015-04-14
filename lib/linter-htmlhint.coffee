@@ -21,7 +21,7 @@ class LinterHtmlhint extends Linter
 
   # update the ruleset anytime the watched htmlhintrc file changes
   setupHtmlHintRc: =>
-    htmlHintRcPath = atom.config.get('linter.linter-htmlhint.htmlhintRcFilePath') || ''
+    htmlHintRcPath = atom.config.get('linter.linter-htmlhint.htmlhintRcFilePath') || @cwd
     fileName = atom.config.get('linter.linter-htmlhint.htmlhintRcFileName') || '.htmlhintrc'
     config = findFile htmlHintRcPath, [fileName]
     if config
