@@ -1,7 +1,7 @@
 {
   "name": "linter-htmlhint",
   "linter-package": true,
-  "activationEvents": [],
+  "activationCommands": {},
   "main": "./lib/init",
   "version": "0.0.13",
   "description": "Linter plugin for HTML, using htmlhint",
