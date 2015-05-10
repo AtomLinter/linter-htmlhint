@@ -1,6 +1,7 @@
 linterPath = atom.packages.getLoadedPackage("linter").path
 Linter = require "#{linterPath}/lib/linter"
 {findFile, warn} = require "#{linterPath}/lib/utils"
+{CompositeDisposable} = require "atom"
 
 class LinterHtmlhint extends Linter
   # The syntax that the linter handles. May be a string or
@@ -30,11 +31,14 @@ class LinterHtmlhint extends Linter
 
   constructor: (editor) ->
     super(editor)
+
+    @disposables = new CompositeDisposable
+
     atom.config.observe 'linter-htmlhint.htmlhintExecutablePath', @formatShellCmd
 
     # reload if path or file name changed of the htmlhintrc file
-    atom.config.observe 'linter-htmlhint.htmlHintRcFilePath', @setupHtmlHintRc
-    atom.config.observe 'linter-htmlhint.htmlHintRcFileName', @setupHtmlHintRc
+    @disposables.add atom.config.observe 'linter-htmlhint.htmlHintRcFilePath', @setupHtmlHintRc
+    @disposables.add atom.config.observe 'linter-htmlhint.htmlHintRcFileName', @setupHtmlHintRc
 
   formatShellCmd: =>
     htmlhintExecutablePath = atom.config.get 'linter-htmlhint.htmlhintExecutablePath'
@@ -44,6 +48,6 @@ class LinterHtmlhint extends Linter
     "#{match.message}"[5...-5].replace "<", "&lt;"
 
   destroy: ->
-    atom.config.unobserve 'linter-htmlhint.htmlhintExecutablePath'
+    @disposables.dispose()
 
 module.exports = LinterHtmlhint
