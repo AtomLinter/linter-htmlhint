@@ -2,7 +2,7 @@
   "name": "linter-htmlhint",
   "linter-package": true,
   "main": "./lib/init",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Linter plugin for HTML, using htmlhint",
   "repository": {
     "type": "git",
