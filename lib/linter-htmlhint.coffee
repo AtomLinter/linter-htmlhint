@@ -1,6 +1,6 @@
 linterPath = atom.packages.getLoadedPackage("linter").path
 Linter = require "#{linterPath}/lib/linter"
-{findFile, warn} = require "#{linterPath}/lib/utils"
+{findFile} = require "#{linterPath}/lib/utils"
 {CompositeDisposable} = require "atom"
 
 class LinterHtmlhint extends Linter
