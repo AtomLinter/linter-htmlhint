@@ -28,13 +28,12 @@ class LinterHtmlhint extends Linter
     if config
       @cmd = @cmd.concat ['-c', config]
 
-
   constructor: (editor) ->
     super(editor)
 
     @disposables = new CompositeDisposable
 
-    atom.config.observe 'linter-htmlhint.htmlhintExecutablePath', @formatShellCmd
+    @disposables.add atom.config.observe 'linter-htmlhint.htmlhintExecutablePath', @formatShellCmd
 
     # reload if path or file name changed of the htmlhintrc file
     @disposables.add atom.config.observe 'linter-htmlhint.htmlHintRcFilePath', @setupHtmlHintRc
