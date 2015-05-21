@@ -47,6 +47,7 @@ class LinterHtmlhint extends Linter
     "#{match.message}"[5...-5].replace "<", "&lt;"
 
   destroy: ->
+    super
     @disposables.dispose()
 
 module.exports = LinterHtmlhint
