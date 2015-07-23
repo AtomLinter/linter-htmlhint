@@ -1,8 +1,14 @@
 {
   "name": "linter-htmlhint",
-  "linter-package": true,
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
   "main": "./lib/init",
-  "version": "0.0.17",
+  "version": "0.1.0",
   "description": "Linter plugin for HTML, using htmlhint",
   "repository": {
     "type": "git",
@@ -13,6 +19,7 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
+    "atom-linter": "^2.0.4",
     "htmlhint": "^0.9.6"
   }
 }
