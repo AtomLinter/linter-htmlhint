@@ -10,8 +10,8 @@ module.exports =
       description: 'HTMLHint Executable Path'
   activate: ->
       console.log 'activate linter-htmlhint'
-      console.log 'config', @config
-      console.log 'dirname', __dirname
+      # console.log 'config', @config
+      # console.log 'dirname', __dirname
       @subscriptions = new CompositeDisposable
       @subscriptions.add atom.config.observe 'linter-htmlhint.executablePath',
         (executablePath) =>
@@ -37,10 +37,11 @@ module.exports =
           parameters = parameters.concat ['-c', htmlhintrc]
 
         return helpers.execNode(atom.config.get('linter-htmlhint.executablePath'), parameters, {}).then (output) ->
+          # console.log('output', output)
           parsed = helpers.parse(output, 'line (?<line>[0-9]+), col (?<col>[0-9]+): (?<message>.+)')
 
           parsed.map (match) ->
-            console.log 'match', match
+
             # use the formatting code in the message to determin type.
             if match.text[1..4] == "[33m"
               match.type = 'warning'
@@ -52,6 +53,10 @@ module.exports =
             # remove the formatting codes:
             match.text = match.text[5...-5]
 
+            # add filepath to return object
+            match.filePath = filePath
+
+            # console.log 'match', match
             return match
 
           return parsed

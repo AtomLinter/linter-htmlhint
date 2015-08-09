@@ -11,6 +11,9 @@ Linter package must be installed in order to use this plugin. If Linter is not i
 $ apm install linter-htmlhint
 ```
 
+### .htmlhintrc
+This plugin will search for a htmlhint configuration file called `.htmlhintrc` and use that file if it exists anywhere in the directory tree.  It will stop at the first `.htmlhintrc` file found.
+
 ### Development and Testing
 If you are developing or testing this plugin, it's easy to load using `apm link`
 
