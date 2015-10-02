@@ -16,7 +16,7 @@ module.exports =
       @subscriptions.add atom.config.observe 'linter-htmlhint.executablePath',
         (executablePath) =>
           @executablePath = executablePath
-      @scopes =  ['text.html.angular', 'text.html.basic', 'text.html.erb', 'text.html.gohtml', 'text.html.jsp', 'text.html.mustache', 'text.html.php', 'text.html.ruby']
+      @scopes =  ['text.html.angular', 'text.html.basic', 'text.html.erb', 'text.html.gohtml', 'text.html.jsp', 'text.html.mustache', 'text.html.handlebars', 'text.html.php', 'text.html.ruby']
 
   deactivate: ->
     @subscriptions.dispose()
