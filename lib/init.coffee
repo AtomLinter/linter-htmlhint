@@ -9,14 +9,10 @@ module.exports =
       type: 'string'
       description: 'HTMLHint Executable Path'
   activate: ->
-      console.log 'activate linter-htmlhint'
-      # console.log 'config', @config
-      # console.log 'dirname', __dirname
-      @subscriptions = new CompositeDisposable
-      @subscriptions.add atom.config.observe 'linter-htmlhint.executablePath',
-        (executablePath) =>
-          @executablePath = executablePath
-      @scopes =  ['text.html.angular', 'text.html.basic', 'text.html.erb', 'text.html.gohtml', 'text.html.jsp', 'text.html.mustache', 'text.html.handlebars', 'text.html.ruby']
+    @subscriptions = new CompositeDisposable
+    @subscriptions.add atom.config.observe 'linter-htmlhint.executablePath',
+      (executablePath) =>
+        @executablePath = executablePath
 
   deactivate: ->
     @subscriptions.dispose()
@@ -24,7 +20,7 @@ module.exports =
   provideLinter: ->
     helpers = require('atom-linter')
     provider =
-      grammarScopes: @scopes
+      grammarScopes: ['text.html.basic', 'text.html.angular', 'text.html.mustache']
       scope: 'file'
       lintOnFly: true
       lint: (textEditor) ->
@@ -36,7 +32,7 @@ module.exports =
         if htmlhintrc and '-c' not in parameters
           parameters = parameters.concat ['-c', htmlhintrc]
 
-        return helpers.execNode(atom.config.get('linter-htmlhint.executablePath'), parameters, {}).then (output) ->
+        return helpers.execNode(@executablePath, parameters, {}).then (output) ->
           # console.log('output', output)
           linterResults = JSON.parse output
           return [] unless linterResults.length
