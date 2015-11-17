@@ -20,7 +20,7 @@ module.exports =
   provideLinter: ->
     helpers = require('atom-linter')
     provider =
-      grammarScopes: ['text.html.basic']
+      grammarScopes: ['text.html.basic', 'text.html.angular', 'text.html.mustache']
       scope: 'file'
       lintOnFly: true
       lint: (textEditor) ->
