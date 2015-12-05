@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "atom-linter": "~3.3.0",
-    "htmlhint": "~0.9.12"
+    "htmlhint": "admosity/HTMLhint#mini-format"
   }
 }

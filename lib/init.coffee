@@ -1,25 +1,14 @@
 path = require 'path'
 
-{CompositeDisposable} = require 'atom'
+{BufferedNodeProcess} = require 'atom'
 
 module.exports =
-  config:
-    executablePath:
-      default: path.join __dirname, '..', 'node_modules', 'htmlhint', 'bin', 'htmlhint'
-      type: 'string'
-      description: 'HTMLHint Executable Path'
   activate: ->
-      console.log 'activate linter-htmlhint'
-      # console.log 'config', @config
-      # console.log 'dirname', __dirname
-      @subscriptions = new CompositeDisposable
-      @subscriptions.add atom.config.observe 'linter-htmlhint.executablePath',
-        (executablePath) =>
-          @executablePath = executablePath
-      @scopes =  ['text.html.angular', 'text.html.basic', 'text.html.erb', 'text.html.gohtml', 'text.html.jsp', 'text.html.mustache', 'text.html.handlebars', 'text.html.ruby']
+    @executablePath = path.resolve "#{__dirname}/../node_modules/htmlhint/bin/htmlhint"
+    @scopes =  ['text.html.angular', 'text.html.basic', 'text.html.erb', 'text.html.gohtml', 'text.html.jsp', 'text.html.mustache', 'text.html.handlebars', 'text.html.ruby']
 
   deactivate: ->
-    @subscriptions.dispose()
+    @lastProcess.kill()
 
   provideLinter: ->
     helpers = require('atom-linter')
@@ -27,22 +16,25 @@ module.exports =
       grammarScopes: @scopes
       scope: 'file'
       lintOnFly: true
-      lint: (textEditor) ->
+      lint: (textEditor) =>
         filePath = textEditor.getPath()
         htmlhintrc = helpers.findFile(filePath, '.htmlhintrc')
         text = textEditor.getText()
-        parameters = [filePath,'--format','json']
+        args = [filePath, '--format', 'mini']
+        command = @executablePath
 
-        if htmlhintrc and '-c' not in parameters
-          parameters = parameters.concat ['-c', htmlhintrc]
+        if htmlhintrc and '-c' not in args
+          args = args.concat ['-c', htmlhintrc]
 
-        return helpers.execNode(atom.config.get('linter-htmlhint.executablePath'), parameters, {}).then (output) ->
-          # console.log('output', output)
-          linterResults = JSON.parse output
-          return [] unless linterResults.length
-          linterMessages = linterResults[0].messages
-          return linterMessages.map (msg) ->
-            range : [[msg.line-1, msg.col-1], [msg.line-1, msg.col-1]]
-            type : msg.type
-            text : msg.message
-            filePath : filePath
+
+        return new Promise (resolve, reject)=>
+          linterMessages = []
+          stdout = (data)->
+            # split lines and parse json objects
+            data.match(/[^\r\n]+/g).forEach (d)->
+              linterMessages.push JSON.parse d
+
+          exit = ->
+            resolve(linterMessages)
+
+          @lastProcess = new BufferedNodeProcess({command, args, stdout, exit})
