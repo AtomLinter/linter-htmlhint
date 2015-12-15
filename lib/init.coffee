@@ -9,14 +9,14 @@ module.exports =
       type: 'string'
       description: 'HTMLHint Executable Path'
   activate: ->
-      console.log 'activate linter-htmlhint'
-      # console.log 'config', @config
-      # console.log 'dirname', __dirname
-      @subscriptions = new CompositeDisposable
-      @subscriptions.add atom.config.observe 'linter-htmlhint.executablePath',
-        (executablePath) =>
-          @executablePath = executablePath
-      @scopes =  ['text.html.angular', 'text.html.basic', 'text.html.erb', 'text.html.gohtml', 'text.html.jsp', 'text.html.mustache', 'text.html.handlebars', 'text.html.ruby']
+    console.log 'activate linter-htmlhint'
+    # console.log 'config', @config
+    # console.log 'dirname', __dirname
+    @subscriptions = new CompositeDisposable
+    @subscriptions.add atom.config.observe 'linter-htmlhint.executablePath',
+      (executablePath) =>
+        @executablePath = executablePath
+    @scopes =  ['text.html.angular', 'text.html.basic', 'text.html.erb', 'text.html.gohtml', 'text.html.jsp', 'text.html.mustache', 'text.html.handlebars', 'text.html.ruby']
 
   deactivate: ->
     @subscriptions.dispose()
@@ -29,7 +29,7 @@ module.exports =
       lintOnFly: true
       lint: (textEditor) ->
         filePath = textEditor.getPath()
-        htmlhintrc = helpers.findFile(filePath, '.htmlhintrc')
+        htmlhintrc = helpers.find(filePath, '.htmlhintrc')
         text = textEditor.getText()
         parameters = [filePath,'--format','json']
 
