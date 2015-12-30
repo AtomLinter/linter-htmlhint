@@ -8,7 +8,7 @@
     }
   },
   "main": "./lib/init",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Linter plugin for HTML, using htmlhint",
   "repository": {
     "type": "git",
