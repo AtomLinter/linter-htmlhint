@@ -11,7 +11,7 @@ If you would like to contribute enhancements or fixes, please do the following:
 Please note that modifications should follow these coding guidelines:
 
 -   Indent is 2 spaces.
--   Code should pass coffeelint linter.
+-   Code should pass `npm test` (alias of `eslint .`).
 -   Vertical whitespace helps readability, don’t be afraid to use it.
 
 ## Development and Testing
