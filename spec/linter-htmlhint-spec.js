@@ -7,19 +7,17 @@ describe('The htmlhint provider for Linter', () => {
 
   beforeEach(() => {
     atom.workspace.destroyActivePaneItem();
-    waitsForPromise(() => {
-      return atom.packages.activatePackage('linter-htmlhint').then(() => {
-        return atom.packages.activatePackage('language-html');
-      });
-    });
+    waitsForPromise(() =>
+      atom.packages.activatePackage('linter-htmlhint').then(() =>
+        atom.packages.activatePackage('language-html')
+      )
+    );
   });
 
   it('detects invalid coding style in bad.html and report as error', () => {
     waitsForPromise(() => {
       const bad = path.join(__dirname, 'fixtures', 'bad.html');
-      return atom.workspace.open(bad).then(editor => {
-        return lint(editor);
-      }).then(messages => {
+      return atom.workspace.open(bad).then(editor => lint(editor)).then(messages => {
         expect(messages.length).toEqual(1);
 
         // test only the first error
@@ -34,9 +32,7 @@ describe('The htmlhint provider for Linter', () => {
   it('finds nothing wrong with a valid file (good.html)', () => {
     waitsForPromise(() => {
       const good = path.join(__dirname, 'fixtures', 'good.html');
-      return atom.workspace.open(good).then(editor => {
-        return lint(editor);
-      }).then(messages => {
+      return atom.workspace.open(good).then(editor => lint(editor)).then(messages => {
         expect(messages.length).toEqual(0);
       });
     });
