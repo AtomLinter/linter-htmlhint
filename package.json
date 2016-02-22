@@ -1,6 +1,6 @@
 {
   "name": "linter-htmlhint",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "description": "A plugin for Atom Linter providing an interface to HTMLHint.",
   "main": "lib/index.js",
