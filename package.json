@@ -30,8 +30,7 @@
     "htmlhint": "~0.9.12"
   },
   "devDependencies": {
-    "eslint": "^2.2.0",
-    "babel-eslint": "^5.0.0",
+    "eslint": "^2.4.0",
     "eslint-config-airbnb": "^6.0.1"
   },
   "eslintConfig": {
@@ -43,7 +42,6 @@
       "no-console": 0
     },
     "extends": "airbnb/base",
-    "parser": "babel-eslint",
     "globals": {
       "atom": true
     },
