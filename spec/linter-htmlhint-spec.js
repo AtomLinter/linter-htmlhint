@@ -1,10 +1,9 @@
 'use babel';
 
 import * as path from 'path';
+const lint = require(path.join('..', 'lib', 'index.js')).provideLinter().lint;
 
 describe('The htmlhint provider for Linter', () => {
-  const lint = require(path.join('..', 'lib', 'index.js')).provideLinter().lint;
-
   beforeEach(() => {
     atom.workspace.destroyActivePaneItem();
     waitsForPromise(() =>
