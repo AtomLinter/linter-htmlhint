@@ -29,6 +29,7 @@
     "atom-linter": "^4.6.1",
     "atom-package-deps": "^4.0.1",
     "htmlhint": "0.9.12",
+    "strip-json-comments": "^2.0.1",
     "tiny-promisify": "^0.1.1"
   },
   "devDependencies": {
