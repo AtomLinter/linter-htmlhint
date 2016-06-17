@@ -1,5 +1,12 @@
 # Change Log
 
+## [v1.2.1](https://github.com/AtomLinter/linter-htmlhint/tree/v1.2.1) (2016-06-17)
+[Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v1.2.0...v1.2.1)
+
+**Implemented enhancements:**
+
+- Update htmlhint to v0.9.13 [\#118](https://github.com/AtomLinter/linter-htmlhint/pull/118) ([Arcanemagus](https://github.com/Arcanemagus))
+
 ## [v1.2.0](https://github.com/AtomLinter/linter-htmlhint/tree/v1.2.0) (2016-06-13)
 [Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v1.1.4...v1.2.0)
 
@@ -189,7 +196,7 @@
 - Package.getActivationCommands is deprecated. [\#13](https://github.com/AtomLinter/linter-htmlhint/issues/13)
 
 ## [v0.0.16](https://github.com/AtomLinter/linter-htmlhint/tree/v0.0.16) (2015-05-21)
-[Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/0.0.15...v0.0.16)
+[Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v0.0.15...v0.0.16)
 
 **Closed issues:**
 
@@ -198,9 +205,6 @@
 **Merged pull requests:**
 
 - Fix Config.unobserve deprecation [\#22](https://github.com/AtomLinter/linter-htmlhint/pull/22) ([CarlRosell](https://github.com/CarlRosell))
-
-## [0.0.15](https://github.com/AtomLinter/linter-htmlhint/tree/0.0.15) (2015-05-04)
-[Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v0.0.15...0.0.15)
 
 ## [v0.0.15](https://github.com/AtomLinter/linter-htmlhint/tree/v0.0.15) (2015-05-04)
 [Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v0.0.13...v0.0.15)
