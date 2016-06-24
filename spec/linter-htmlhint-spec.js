@@ -24,7 +24,7 @@ describe('The htmlhint provider for Linter', () => {
         expect(messages[0].type).toBe('error');
         expect(messages[0].text).toBe('Doctype must be declared first.');
         expect(messages[0].filePath).toBe(bad);
-        expect(messages[0].range).toEqual([[0, 0], [0, 13]]);
+        expect(messages[0].range).toEqual([[0, 0], [0, 5]]);
       });
     });
   });
