@@ -9,7 +9,25 @@
     "url": "https://github.com/AtomLinter/linter-htmlhint.git"
   },
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.4.0 <2.0.0"
+  },
+  "configSchema": {
+    "enabledScopes": {
+      "description": "List of scopes to run HTMLHint on, run `Editor: Log Cursor Scope` to determine the scopes for a file.",
+      "type": "array",
+      "default": [
+        "text.html.angular",
+        "text.html.basic",
+        "text.html.erb",
+        "text.html.gohtml",
+        "text.html.jsp",
+        "text.html.mustache",
+        "text.html.ruby"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
   },
   "scripts": {
     "test": "apm test",
@@ -40,18 +58,19 @@
   "eslintConfig": {
     "rules": {
       "comma-dangle": [
-        2,
+        "error",
         "never"
       ],
-      "global-require": 0,
+      "global-require": "off",
       "import/no-unresolved": [
-        2,
+        "error",
         {
           "ignore": [
             "atom"
           ]
         }
-      ]
+      ],
+      "import/no-extraneous-dependencies": "off"
     },
     "extends": "airbnb-base",
     "globals": {
