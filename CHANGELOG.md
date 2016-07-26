@@ -1,5 +1,25 @@
 # Change Log
 
+## [v1.3.0](https://github.com/AtomLinter/linter-htmlhint/tree/v1.3.0) (2016-07-26)
+[Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v1.2.1...v1.3.0)
+
+**Implemented enhancements:**
+
+- How can I add a custom grammar to the linter [\#124](https://github.com/AtomLinter/linter-htmlhint/issues/124)
+- Update eslint-config-airbnb-base to version 5.0.0 🚀 [\#130](https://github.com/AtomLinter/linter-htmlhint/pull/130) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update atom-linter to version 7.0.0 🚀 [\#128](https://github.com/AtomLinter/linter-htmlhint/pull/128) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Make scopes configurable [\#125](https://github.com/AtomLinter/linter-htmlhint/pull/125) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update CI configurations [\#123](https://github.com/AtomLinter/linter-htmlhint/pull/123) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update eslint-config-airbnb-base to version 4.0.0 🚀 [\#122](https://github.com/AtomLinter/linter-htmlhint/pull/122) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update eslint to version 3.0.0 🚀 [\#121](https://github.com/AtomLinter/linter-htmlhint/pull/121) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update atom-linter to version 6.0.0 🚀 [\#120](https://github.com/AtomLinter/linter-htmlhint/pull/120) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+
+**Fixed bugs:**
+
+- It should not lint .hbs files [\#47](https://github.com/AtomLinter/linter-htmlhint/issues/47)
+- Make scopes configurable [\#125](https://github.com/AtomLinter/linter-htmlhint/pull/125) ([Arcanemagus](https://github.com/Arcanemagus))
+- Remove Handlebars support [\#116](https://github.com/AtomLinter/linter-htmlhint/pull/116) ([Arcanemagus](https://github.com/Arcanemagus))
+
 ## [v1.2.1](https://github.com/AtomLinter/linter-htmlhint/tree/v1.2.1) (2016-06-17)
 [Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v1.2.0...v1.2.1)
 
