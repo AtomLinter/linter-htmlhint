@@ -1,20 +1,24 @@
-version: "{build}"
-os: Windows Server 2012 R2
+# Project specific config
+environment:
+  matrix:
+  - ATOM_CHANNEL: stable
+  - ATOM_CHANNEL: beta
+
+install:
+  # Install Node.js to run any configured linters
+  - ps: Install-Product node 6
+
+# Generic setup follows
+build_script:
+  - ps: iex ((new-object net.webclient).DownloadString('https://github.com/Arcanemagus/ci/raw/atomlinter/build-package.ps1'))
+
 branches:
   only:
     - master
+
+version: "{build}"
+platform: x64
+clone_depth: 10
+skip_tags: true
 test: off
 deploy: off
-
-install:
-  - appveyor DownloadFile https://atom.io/download/windows -FileName AtomSetup.exe
-  - AtomSetup.exe /silent
-
-build_script:
-  - cd %APPVEYOR_BUILD_FOLDER%
-  - SET PATH=%LOCALAPPDATA%\atom\bin;%PATH%
-  - atom -v
-  - apm -v
-  - apm clean
-  - apm install
-  - apm test
