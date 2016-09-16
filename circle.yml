@@ -1,13 +1,8 @@
 test:
   override:
-    - curl -s https://raw.githubusercontent.com/Arcanemagus/ci/atomlinter/build-package.sh | sh
+    - curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh
 
 dependencies:
   override:
+    # If nothing is put here, CircleCI will run `npm install` using the system Node.js
     - echo "Managed in the script"
-
-machine:
-  node:
-    version: 6
-  environment:
-    ATOM_LINT_WITH_BUNDLED_NODE: "false"
