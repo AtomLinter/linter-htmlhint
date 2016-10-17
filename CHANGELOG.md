@@ -1,5 +1,24 @@
 # Change Log
 
+## [v1.3.1](https://github.com/AtomLinter/linter-htmlhint/tree/v1.3.1) (2016-10-17)
+[Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v1.3.0...v1.3.1)
+
+**Implemented enhancements:**
+
+- Update eslint-config-airbnb-base to version 9.0.0 🚀 [\#146](https://github.com/AtomLinter/linter-htmlhint/pull/146) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Updates and maintenance [\#145](https://github.com/AtomLinter/linter-htmlhint/pull/145) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update eslint-config-airbnb-base to version 8.0.0 🚀 [\#141](https://github.com/AtomLinter/linter-htmlhint/pull/141) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update CI configuration [\#140](https://github.com/AtomLinter/linter-htmlhint/pull/140) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update eslint-config-airbnb-base to v7.1.0 [\#139](https://github.com/AtomLinter/linter-htmlhint/pull/139) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update eslint-config-airbnb-base to version 7.0.0 🚀 [\#137](https://github.com/AtomLinter/linter-htmlhint/pull/137) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update CI [\#134](https://github.com/AtomLinter/linter-htmlhint/pull/134) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update atom-linter to version 8.0.0 🚀 [\#133](https://github.com/AtomLinter/linter-htmlhint/pull/133) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+
+**Fixed bugs:**
+
+- Updates and maintenance [\#145](https://github.com/AtomLinter/linter-htmlhint/pull/145) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update CI configuration [\#144](https://github.com/AtomLinter/linter-htmlhint/pull/144) ([Arcanemagus](https://github.com/Arcanemagus))
+
 ## [v1.3.0](https://github.com/AtomLinter/linter-htmlhint/tree/v1.3.0) (2016-07-26)
 [Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v1.2.1...v1.3.0)
 
