@@ -1,5 +1,14 @@
 # Change Log
 
+## [v1.3.2](https://github.com/AtomLinter/linter-htmlhint/tree/v1.3.2) (2017-02-22)
+[Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v1.3.1...v1.3.2)
+
+**Implemented enhancements:**
+
+- Remove macOS testing [\#152](https://github.com/AtomLinter/linter-htmlhint/pull/152) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update dependencies to enable Greenkeeper 🌴 [\#149](https://github.com/AtomLinter/linter-htmlhint/pull/149) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+- Update tiny-promisify to version 1.0.0 🚀 [\#147](https://github.com/AtomLinter/linter-htmlhint/pull/147) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+
 ## [v1.3.1](https://github.com/AtomLinter/linter-htmlhint/tree/v1.3.1) (2016-10-17)
 [Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v1.3.0...v1.3.1)
 
