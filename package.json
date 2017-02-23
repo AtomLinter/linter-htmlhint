@@ -52,9 +52,9 @@
     "tiny-promisify": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.8.0",
-    "eslint-config-airbnb-base": "^11.0.0",
-    "eslint-plugin-import": "^2.0.1"
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0"
   },
   "eslintConfig": {
     "rules": {
