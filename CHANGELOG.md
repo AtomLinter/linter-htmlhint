@@ -1,6 +1,13 @@
 # Change Log
 
-## [v1.3.2](https://github.com/AtomLinter/linter-htmlhint/tree/v1.3.2) (2017-02-22)
+## [v1.3.3](https://github.com/AtomLinter/linter-htmlhint/tree/v1.3.3) (2017-03-30)
+[Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v1.3.2...v1.3.3)
+
+**Fixed bugs:**
+
+- Don't lint html.erb and html.ruby scopes [\#154](https://github.com/AtomLinter/linter-htmlhint/pull/154) ([ricardograca](https://github.com/ricardograca))
+
+## [v1.3.2](https://github.com/AtomLinter/linter-htmlhint/tree/v1.3.2) (2017-02-23)
 [Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v1.3.1...v1.3.2)
 
 **Implemented enhancements:**
