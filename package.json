@@ -20,7 +20,7 @@
         "text.html.basic",
         "text.html.gohtml",
         "text.html.jsp",
-        "text.html.mustache",
+        "text.html.mustache"
       ],
       "items": {
         "type": "string"
