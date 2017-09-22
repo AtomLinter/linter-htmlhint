@@ -2,7 +2,7 @@
 
 import * as path from 'path';
 
-const lint = require('../lib/index.js').provideLinter().lint;
+const { lint } = require('../lib/index.js').provideLinter();
 
 describe('The htmlhint provider for Linter', () => {
   beforeEach(() => {
@@ -11,8 +11,7 @@ describe('The htmlhint provider for Linter', () => {
       Promise.all([
         atom.packages.activatePackage('linter-htmlhint'),
         atom.packages.activatePackage('language-html')
-      ])
-    );
+      ]));
   });
 
   it('detects invalid coding style in bad.html and report as error', () => {
