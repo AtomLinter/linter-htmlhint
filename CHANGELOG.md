@@ -1,5 +1,23 @@
 # Change Log
 
+## [v1.3.4](https://github.com/AtomLinter/linter-htmlhint/tree/v1.3.4) (2017-09-22)
+[Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v1.3.3...v1.3.4)
+
+**Implemented enhancements:**
+
+- Slow activation [\#59](https://github.com/AtomLinter/linter-htmlhint/issues/59)
+- Updates [\#166](https://github.com/AtomLinter/linter-htmlhint/pull/166) ([Arcanemagus](https://github.com/Arcanemagus))
+- Asyncify the specs [\#165](https://github.com/AtomLinter/linter-htmlhint/pull/165) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update eslint-config-airbnb-base to version 12.0.0 🚀 [\#163](https://github.com/AtomLinter/linter-htmlhint/pull/163) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Update eslint to version 4.3.0 🚀 [\#160](https://github.com/AtomLinter/linter-htmlhint/pull/160) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Update atom-linter to version 10.0.0 🚀 [\#156](https://github.com/AtomLinter/linter-htmlhint/pull/156) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
+**Fixed bugs:**
+
+- Object.dirname is deprecated. [\#162](https://github.com/AtomLinter/linter-htmlhint/issues/162)
+- Updates [\#166](https://github.com/AtomLinter/linter-htmlhint/pull/166) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update Travis CI configuration [\#161](https://github.com/AtomLinter/linter-htmlhint/pull/161) ([Arcanemagus](https://github.com/Arcanemagus))
+
 ## [v1.3.3](https://github.com/AtomLinter/linter-htmlhint/tree/v1.3.3) (2017-03-30)
 [Full Changelog](https://github.com/AtomLinter/linter-htmlhint/compare/v1.3.2...v1.3.3)
 
@@ -13,7 +31,7 @@
 **Implemented enhancements:**
 
 - Remove macOS testing [\#152](https://github.com/AtomLinter/linter-htmlhint/pull/152) ([Arcanemagus](https://github.com/Arcanemagus))
-- Update dependencies to enable Greenkeeper 🌴 [\#149](https://github.com/AtomLinter/linter-htmlhint/pull/149) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+- Update dependencies to enable Greenkeeper 🌴 [\#149](https://github.com/AtomLinter/linter-htmlhint/pull/149) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
 - Update tiny-promisify to version 1.0.0 🚀 [\#147](https://github.com/AtomLinter/linter-htmlhint/pull/147) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
 
 ## [v1.3.1](https://github.com/AtomLinter/linter-htmlhint/tree/v1.3.1) (2016-10-17)
