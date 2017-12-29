@@ -25,6 +25,11 @@
       "items": {
         "type": "string"
       }
+    },
+    "disableWhenNoHtmhintConfig": {
+      "title": "Disable when no HTMLHint config is found",
+      "type": "boolean",
+      "default": true
     }
   },
   "scripts": {
