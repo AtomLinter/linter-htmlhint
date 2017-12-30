@@ -32,4 +32,26 @@ describe('The htmlhint provider for Linter', () => {
 
     expect(messages.length).toBe(0);
   });
+
+  it('lints an invalid file (bad.html) with a default configuration when no config file is present', async () => {
+    atom.config.set('linter-htmlhint.disableWhenNoHtmhintConfig', false);
+
+    const bad = path.join(__dirname, 'fixtures', 'bad.html');
+    const editor = await atom.workspace.open(bad);
+    spyOn(editor, 'getPath').andReturn(__dirname);
+    const messages = await lint(editor);
+
+    expect(messages.length).toEqual(3);
+  });
+
+  it('does not lint an invalid file (bad.html) when no config is found and the disable option set', async () => {
+    atom.config.set('linter-htmlhint.disableWhenNoHtmhintConfig', true);
+
+    const bad = path.join(__dirname, 'fixtures', 'bad.html');
+    const editor = await atom.workspace.open(bad);
+    spyOn(editor, 'getPath').andReturn(__dirname);
+    const messages = await lint(editor);
+
+    expect(messages).toBe(null);
+  });
 });
