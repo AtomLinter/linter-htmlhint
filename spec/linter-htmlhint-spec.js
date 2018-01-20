@@ -36,7 +36,7 @@ describe('The htmlhint provider for Linter', () => {
 
   describe('The "Disable when no HTMLHint config is found" option', () => {
     it('lints files with no config when disabled', async () => {
-      atom.config.set('linter-htmlhint.disableWhenNoHtmhintConfig', false);
+      atom.config.set('linter-htmlhint.disableWhenNoHtmlhintConfig', false);
 
       const editor = await atom.workspace.open(badFile);
       spyOn(editor, 'getPath').andReturn(__dirname);
@@ -46,7 +46,7 @@ describe('The htmlhint provider for Linter', () => {
     });
 
     it("doesn't lint files with no config when enabled", async () => {
-      atom.config.set('linter-htmlhint.disableWhenNoHtmhintConfig', true);
+      atom.config.set('linter-htmlhint.disableWhenNoHtmlhintConfig', true);
 
       const editor = await atom.workspace.open(badFile);
       spyOn(editor, 'getPath').andReturn(__dirname);
