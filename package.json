@@ -20,7 +20,8 @@
         "text.html.basic",
         "text.html.gohtml",
         "text.html.jsp",
-        "text.html.mustache"
+        "text.html.mustache",
+        "text.html.vue"
       ],
       "items": {
         "type": "string"
