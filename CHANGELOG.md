@@ -1,3 +1,17 @@
+## [1.5.1](https://github.com/AtomLinter/linter-htmlhint/compare/v1.5.0...v1.5.1) (2018-09-12)
+
+
+### Bug Fixes
+
+* **package:** update htmlhint to version 0.10.0 ([fd934a2](https://github.com/AtomLinter/linter-htmlhint/commit/fd934a2))
+
+# [1.5.0](https://github.com/AtomLinter/linter-htmlhint/compare/v1.4.0...v1.5.0) (2018-08-29)
+
+
+### Features
+
+* disable when no .htmlhintrc file is found ([#172](https://github.com/AtomLinter/linter-htmlhint/issues/172)) ([0e2bb0d](https://github.com/AtomLinter/linter-htmlhint/commit/0e2bb0d))
+
 # Change Log
 
 ## [v1.4.0](https://github.com/AtomLinter/linter-htmlhint/tree/v1.4.0) (2017-10-28)

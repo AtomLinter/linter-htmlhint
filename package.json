@@ -1,6 +1,6 @@
 {
   "name": "linter-htmlhint",
-  "version": "1.4.0",
+  "version": "1.5.1",
   "private": true,
   "description": "A plugin for Atom Linter providing an interface to HTMLHint.",
   "main": "lib/index.js",
@@ -26,9 +26,15 @@
       "items": {
         "type": "string"
       }
+    },
+    "disableWhenNoHtmlhintConfig": {
+      "title": "Disable when no HTMLHint config is found",
+      "type": "boolean",
+      "default": true
     }
   },
   "scripts": {
+    "commitmsg": "commitlint -e $GIT_PARAMS",
     "test": "apm test",
     "lint": "eslint ."
   },
@@ -45,15 +51,21 @@
   "dependencies": {
     "atom-linter": "^10.0.0",
     "atom-package-deps": "^4.6.0",
-    "htmlhint": "0.9.13",
+    "htmlhint": "0.10.0",
     "strip-json-comments": "^2.0.1",
     "tiny-promisify": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^4.6.0",
-    "eslint-config-airbnb-base": "^12.0.0",
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
+    "@commitlint/travis-cli": "^7.0.0",
+    "@semantic-release/apm-config": "^5.0.2",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.7.0",
-    "jasmine-fix": "^1.3.1"
+    "husky": "^0.14.3",
+    "jasmine-fix": "^1.3.1",
+    "semantic-release": "^15.9.0"
   },
   "eslintConfig": {
     "rules": {
@@ -89,5 +101,13 @@
         "1.0.0": "provideLinter"
       }
     }
+  },
+  "release": {
+    "extends": "@semantic-release/apm-config"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
