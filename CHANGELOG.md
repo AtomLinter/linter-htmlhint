@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/AtomLinter/linter-htmlhint/compare/v1.5.1...v1.5.2) (2019-01-17)
+
+
+### Bug Fixes
+
+* **package:** update atom-package-deps to version 5.0.0 ([7b4c90a](https://github.com/AtomLinter/linter-htmlhint/commit/7b4c90a))
+
 ## [1.5.1](https://github.com/AtomLinter/linter-htmlhint/compare/v1.5.0...v1.5.1) (2018-09-12)
 
 
