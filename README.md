@@ -20,4 +20,4 @@ This plugin will search for a [HTMLHint] configuration file called `.htmlhintrc`
 You can configure `linter-htmlhint` in Atom's Settings.
 
 [linter]: https://github.com/atom-community/linter "Linter"
-[HTMLHint]: https://github.com/yaniswang/HTMLHint "HTMLHint"
+[HTMLHint]: https://github.com/htmlhint/HTMLHint "HTMLHint"
