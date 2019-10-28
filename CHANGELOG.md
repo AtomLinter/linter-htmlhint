@@ -1,3 +1,12 @@
+## [1.6.3](https://github.com/AtomLinter/linter-htmlhint/compare/v1.6.2...v1.6.3) (2019-10-28)
+
+
+### Bug Fixes
+
+* **deps:** instantiate HTMLHint ([7fc16a9](https://github.com/AtomLinter/linter-htmlhint/commit/7fc16a9cd5eb683f8c20376404b37f1735cfc8e6))
+* **deps:** update dependency htmlhint to v0.11.0 ([f09031c](https://github.com/AtomLinter/linter-htmlhint/commit/f09031ca05877b61d4b22f09a1bfdbee933377d5))
+* **deps:** update package-lock.json ([adcf67f](https://github.com/AtomLinter/linter-htmlhint/commit/adcf67f5ac2f4850592389121480b0ccd1e2bccf))
+
 ## [1.6.2](https://github.com/AtomLinter/linter-htmlhint/compare/v1.6.1...v1.6.2) (2019-05-29)
 
 
