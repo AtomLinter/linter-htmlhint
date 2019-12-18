@@ -63,7 +63,7 @@
     "eslint-plugin-import": "2.19.1",
     "husky": "3.0.9",
     "jasmine-fix": "1.3.1",
-    "semantic-release": "15.13.28"
+    "semantic-release": "15.13.31"
   },
   "eslintConfig": {
     "rules": {
