@@ -54,9 +54,9 @@
     "tiny-promisify": "1.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "8.2.0",
-    "@commitlint/config-conventional": "8.2.0",
-    "@commitlint/travis-cli": "8.2.0",
+    "@commitlint/cli": "8.3.3",
+    "@commitlint/config-conventional": "8.3.3",
+    "@commitlint/travis-cli": "8.3.3",
     "@semantic-release/apm-config": "6.0.2",
     "eslint": "6.7.2",
     "eslint-config-airbnb-base": "14.0.0",
